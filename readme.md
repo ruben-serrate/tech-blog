@@ -1,7 +1,7 @@
-UNiDAYS &reg; Tech Blog
-=======================
+Wordpress as dependancy with composer
+=====================================
 
-Wordpress instalation is managed via composer. 
+
 
 ##Update process:
 0. Back up the database, the update process will probably modify it.
@@ -13,8 +13,7 @@ Wordpress instalation is managed via composer.
 
 ##Deployment process:
 1. In the repository's root folder, run composer install. Composer will create a wordpress folder with WP in it.
-2. Create a new "wp-config.php" inside the wordpress folder containing just these lines:
-```
+2. Create a new "wp-config.php" inside the wordpress folder containing just these lines: ```
 <?php
 require(__DIR__.'/../wp-config.php');
 /*  actual wp-config lives in the repository's root folder, 
