@@ -1,4 +1,6 @@
 <?php
+
+
 /**
  * The base configuration for WordPress
  *
@@ -19,17 +21,39 @@
  */
 
 // ** MySQL settings - You can get this info from your web host ** //
-/** The name of the database for WordPress */
-define('DB_NAME', '****');
+define('LIVE_SERVER',strpos($_SERVER['SERVER_NAME'],"rs.dev")===FALSE);
 
-/** MySQL database username */
-define('DB_USER', '****');
 
-/** MySQL database password */
-define('DB_PASSWORD', '*****');
 
-/** MySQL hostname */
-define('DB_HOST', '****');
+if(LIVE_SERVER) {
+	//live config values
+	
+	/** The name of the database for WordPress */
+	define('DB_NAME', '??????');
+
+	/** MySQL database username */
+	define('DB_USER', '??????');
+
+	/** MySQL database password */
+	define('DB_PASSWORD', '??????');
+
+	/** MySQL hostname */
+	define('DB_HOST', '??????');
+} else {
+	//local config values
+	
+	/** The name of the database for WordPress */
+	define('DB_NAME', '****');
+
+	/** MySQL database username */
+	define('DB_USER', 'root');
+
+	/** MySQL database password */
+	define('DB_PASSWORD', 'root');
+
+	/** MySQL hostname */
+	define('DB_HOST', 'localhost');
+}
 
 /** Database Charset to use in creating database tables. */
 define('DB_CHARSET', 'utf8mb4');
