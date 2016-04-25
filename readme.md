@@ -1,5 +1,5 @@
-Wordpress as a composer dependancy.
-===================================
+UNiDAYS Tech Blog
+=================
 
 ##Update process:
 0. Back up the database, the update process will probably write something it.
